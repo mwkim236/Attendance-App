@@ -22,7 +22,7 @@ const reducer = (state, action) => {
             return {
                 count: state.count - 1,
                 students: state.students.filter((student) => {
-                    student.id !== action.payload.id
+                    return student.id !== action.payload.id
                 }),
             }
 
